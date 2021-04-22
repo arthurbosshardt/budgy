@@ -1,4 +1,4 @@
-.content {
+.content-hub {
   display: flex;
   margin: 0px auto 32px;
   padding: 0 16px;
@@ -25,6 +25,10 @@ svg.material-icons:not(:last-child) {
   fill: #888;
 }
 
+.card#inscription-card {
+  margin-bottom: 20px;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -41,7 +45,7 @@ svg.material-icons:not(:last-child) {
   border: 1px solid #eee;
   background-color: #fafafa;
   height: 40px;
-  margin: 0 8px 16px;
+  margin: 0 8px 0px;
   padding: 16px;
   display: flex;
   flex-direction: row;
@@ -51,7 +55,6 @@ svg.material-icons:not(:last-child) {
   line-height: 24px;
 }
 
-
 .card-container .card:not(:last-child) {
   margin-right: 0;
 }
@@ -59,6 +62,7 @@ svg.material-icons:not(:last-child) {
 .card.card-small {
   height: 90px;
   width: 168px;
+  margin-bottom: 20px;
   display: inline-block;
 }
 
@@ -91,12 +95,12 @@ svg.material-icons:not(:last-child) {
 }
 
 #title-budgy {
-  margin: 0px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
   height: 50px;
 }
 
 #presentation-budgy {
-  height: 50px
+  height: 50px;
 }
 
 a,
@@ -147,14 +151,6 @@ footer a {
   height: 16px;
   width: 16px;
   margin-right: 4px;
-}
-
-svg#clouds {
-  position: fixed;
-  bottom: -160px;
-  left: -230px;
-  z-index: -10;
-  width: 1920px;
 }
 
 /* Responsive Styles */
