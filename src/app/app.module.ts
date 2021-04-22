@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { HubComponent } from './hub/hub.component';
 import { UserComponent } from './user/user.component';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const routes: Routes = [
   { path: '', component: HubComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatTabsModule,
     AppRoutingModule,
     RouterModule.forRoot(routes)
   ],
