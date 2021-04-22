@@ -6,15 +6,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { HubComponent } from './hub/hub.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   { path: '', component: HubComponent },
+  { path: 'user', component: UserComponent },
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    HubComponent
+    HubComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
