@@ -1,39 +1,44 @@
 <div class="toolbar" role="banner">
+  <mat-icon class="tab-icon" id="return-logo" routerLink="/">keyboard_backspace</mat-icon>
   <img
     width="140"
     alt="Budgy logo"
     src="../../assets/images/budgy_big_white.png"
     routerLink="/"
   />
+  <div id="right-top-corner-logo">
+    <mat-icon class="tab-icon" id="notification-logo">notifications</mat-icon>
+    <mat-icon class="tab-icon" id="account-logo">account_circle</mat-icon>
+  </div>
 </div>
 <mat-tab-group>
   <mat-tab>
     <ng-template mat-tab-label>
-      <mat-icon class="tab-icon">add_circle_outline</mat-icon>
+      <mat-icon class="tab-icon">lock</mat-icon>
       Mes assurances
     </ng-template>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
-      <mat-icon class="tab-icon">table_chart</mat-icon>
+      <mat-icon class="tab-icon">offline_bolt</mat-icon>
       Mes fournisseurs
     </ng-template>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
-      <mat-icon class="tab-icon">pie_chart</mat-icon>
-      Mes biens matériels 
+      <mat-icon class="tab-icon">local_laundry_service</mat-icon>
+      Mes meubles
     </ng-template>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
-      <mat-icon class="tab-icon">settings</mat-icon>
-      Mes aides
+      <mat-icon class="tab-icon">euro_symbol</mat-icon>
+      Mes aides financières
     </ng-template>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
-      <mat-icon class="tab-icon">settings</mat-icon>
+      <mat-icon class="tab-icon">file_copy</mat-icon>
       Mes documents
     </ng-template>
   </mat-tab>
