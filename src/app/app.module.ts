@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HubComponent } from './hub/hub.component';
 import { UserComponent } from './user/user.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { BudgeComponent } from './budge/budge.component';
 
 const routes: Routes = [
   { path: '', component: HubComponent },
@@ -18,7 +19,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HubComponent,
-    UserComponent
+    UserComponent,
+    BudgeComponent
   ],
   imports: [
     BrowserModule,

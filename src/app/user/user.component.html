@@ -19,10 +19,12 @@
       <mat-icon class="tab-icon">lock</mat-icon>
       Mes assurances
     </ng-template>
-    <div>Assurance auto</div>
-    <div>Assurance habitation</div>
-    <div>Assurance santé</div>
-    <div>Mutuelle santé</div>
+    <div class="budge-container">
+      <app-budge title="Assurance auto" logo="directions_car" description="L'assurance qui couvre tes problèmes lié à ton véhicule" modele="medium-budge"></app-budge>
+      <app-budge title="Assurance habitation" logo="home" description="L'assurance qui couvre tes problèmes lié à ton habitation" modele="medium-budge"></app-budge>
+      <app-budge title="Assurance santé" logo="healing" description="L'assurance qui couvre tes problèmes lié à ta santé" modele="medium-budge"></app-budge>
+      <app-budge title="Mutuelle santé" logo="people" description="L'organisme qui t'aide à rembourser tes traitements" modele="medium-budge"></app-budge>
+    </div>
     <mat-icon class="background-logo">lock</mat-icon>
   </mat-tab>
   <mat-tab>
@@ -30,10 +32,12 @@
       <mat-icon class="tab-icon">offline_bolt</mat-icon>
       Mes fournisseurs
     </ng-template>
-    <div>Fournisseur internet</div>
-    <div>Fournisseur de gaz</div>
-    <div>Fournisseur d'électricité</div>
-    <div>Fournisseur d'eau</div>
+    <div class="budge-container">
+      <app-budge title="Fournisseur internet" logo="wifi" description="Ton fournisseur de connexion internet" modele="medium-budge"></app-budge>
+      <app-budge title="Fournisseur de gaz" logo="whatshot" description="Ton fournisseur en gaz" modele="medium-budge"></app-budge>
+      <app-budge title="Fournisseur d'électricité" logo="flash_on" description="Ton fournisseur en électricité" modele="medium-budge"></app-budge>
+      <app-budge title="Fournisseur d'eau" logo="waves" description="Ton fournisseur en eau" modele="medium-budge"></app-budge>
+    </div>
     <mat-icon class="background-logo">offline_bolt</mat-icon>
   </mat-tab>
   <mat-tab>
@@ -41,9 +45,11 @@
       <mat-icon class="tab-icon">euro_symbol</mat-icon>
       Mon argent
     </ng-template>
-    <div>Banque</div>
-    <div>Aides publiques</div>
-    <div>Saisie des dépenses</div>
+    <div class="budge-container">
+      <app-budge title="Banque" logo="account_balance" description="Les banques chez qui tu souhaites gérer ton argent" modele="medium-budge"></app-budge>
+      <app-budge title="Aides publiques" logo="euro_symbol" description="Les aides publiques pour lesquelles tu peux prétendre" modele="medium-budge"></app-budge>
+      <app-budge title="Saisie des dépenses" logo="pie_chart" description="Un outil de saisie de dépense pour t'y retrouver" modele="medium-budge"></app-budge>
+    </div>
     <mat-icon class="background-logo">euro_symbol</mat-icon>
   </mat-tab>
   <mat-tab>
