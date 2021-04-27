@@ -6,7 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./budge.component.less']
 })
 export class BudgeComponent implements OnInit {
-  @Input() isChecked: boolean;
+  @Input() isSelected: boolean;
+  @Input() isDone: boolean;
   @Input() title: string;
   @Input() maticon: string;
   @Input() description: string;

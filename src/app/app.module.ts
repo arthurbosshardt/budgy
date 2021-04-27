@@ -12,6 +12,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { BudgeComponent } from './budge/budge.component';
 import { FormsModule } from '@angular/forms';
 import { MatRippleModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
 
 const routes: Routes = [
   { path: '', component: HubComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatIconModule,
     MatSlideToggleModule,
+    MatButtonModule,
     MatRippleModule,
     MatTabsModule,
     FormsModule,

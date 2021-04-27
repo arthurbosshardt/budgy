@@ -1,14 +1,21 @@
 <div
   class="budge"
   class="{{ modele }}"
-  [ngClass]="{ 'unselected-budge': !isChecked }"
-  matRipple
-  [matRippleColor]="color"
+  [ngClass]="{ 'done-budge': isDone, 'undone-budge': !isDone, 'unselected-budge': !isSelected }"
 >
   <div class="budge-content">
-    <mat-slide-toggle [(ngModel)]="isChecked"></mat-slide-toggle>
+    <button
+      class="select-button"
+      mat-mini-fab
+      matRipple
+      [matRippleColor]="color"
+      (click)="isSelected=!isSelected"
+    >
+      <mat-icon>{{ isSelected ? "add" : "remove" }}</mat-icon>
+    </button>
+    <mat-slide-toggle [(ngModel)]="isDone" [disabled]="!isSelected"></mat-slide-toggle>
     <h2>{{ title }}</h2>
-    <mat-icon>{{ maticon }}</mat-icon>
+    <mat-icon class="budge-icon">{{ maticon }}</mat-icon>
     <br />
     <p>{{ description }}</p>
   </div>

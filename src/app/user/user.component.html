@@ -20,10 +20,10 @@
       Mes assurances
     </ng-template>
     <div class="budge-container">
-      <app-budge title="Assurance auto" maticon="directions_car" description="L'assurance qui couvre tes problèmes lié à ton véhicule" modele="medium-budge" [isChecked]="true"></app-budge>
-      <app-budge title="Assurance habitation" maticon="home" description="L'assurance qui couvre tes problèmes lié à ton habitation" modele="medium-budge" [isChecked]="true"></app-budge>
-      <app-budge title="Assurance santé" maticon="healing" description="L'assurance qui couvre tes problèmes lié à ta santé" modele="medium-budge" [isChecked]="true"></app-budge>
-      <app-budge title="Mutuelle santé" maticon="people" description="L'organisme qui t'aide à rembourser tes traitements" modele="medium-budge" [isChecked]="true"></app-budge>
+      <app-budge title="Assurance auto" maticon="directions_car" description="L'assurance qui couvre tes problèmes liés à ton véhicule" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Assurance habitation" maticon="home" description="L'assurance qui couvre tes problèmes liés à ton habitation" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Assurance santé" maticon="healing" description="L'assurance qui couvre tes problèmes liés à ta santé" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Mutuelle santé" maticon="people" description="L'organisme qui t'aide à rembourser tes traitements" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
     </div>
     <mat-icon class="background-logo">lock</mat-icon>
   </mat-tab>
@@ -33,10 +33,10 @@
       Mes fournisseurs
     </ng-template>
     <div class="budge-container">
-      <app-budge title="Fournisseur internet" maticon="wifi" description="Ton fournisseur nternet" modele="medium-budge" [isChecked]="true"></app-budge>
-      <app-budge title="Fournisseur de gaz" maticon="whatshot" description="Ton fournisseur en gaz" modele="medium-budge" [isChecked]="true"></app-budge>
-      <app-budge title="Fournisseur d'électricité" maticon="flash_on" description="Ton fournisseur en électricité" modele="medium-budge" [isChecked]="true"></app-budge>
-      <app-budge title="Fournisseur d'eau" maticon="waves" description="Ton fournisseur en eau" modele="medium-budge" [isChecked]="true"></app-budge>
+      <app-budge title="Fournisseur internet" maticon="wifi" description="Ton fournisseur nternet" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Fournisseur de gaz" maticon="whatshot" description="Ton fournisseur en gaz" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Fournisseur d'électricité" maticon="flash_on" description="Ton fournisseur en électricité" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Fournisseur d'eau" maticon="waves" description="Ton fournisseur en eau" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
     </div>
     <mat-icon class="background-logo">offline_bolt</mat-icon>
   </mat-tab>
@@ -46,9 +46,9 @@
       Mon argent
     </ng-template>
     <div class="budge-container">
-      <app-budge title="Banque" maticon="account_balance" description="Les banques chez qui tu souhaites gérer ton argent" modele="medium-budge" [isChecked]="true"></app-budge>
-      <app-budge title="Aides publiques" maticon="euro_symbol" description="Les aides publiques pour lesquelles tu peux prétendre" modele="medium-budge" [isChecked]="true"></app-budge>
-      <app-budge title="Saisie des dépenses" maticon="pie_chart" description="Un outil de saisie de tes dépenses pour t'y retrouver" modele="medium-budge" [isChecked]="true"></app-budge>
+      <app-budge title="Banque" maticon="account_balance" description="Les banques chez qui tu souhaites gérer ton argent" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Aides publiques" maticon="euro_symbol" description="Les aides publiques pour lesquelles tu peux prétendre" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Saisie des dépenses" maticon="pie_chart" description="Un outil de saisie de tes dépenses pour t'y retrouver" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
     </div>
     <mat-icon class="background-logo">euro_symbol</mat-icon>
   </mat-tab>
@@ -58,18 +58,18 @@
       Mes meubles
     </ng-template>
     <div class="budge-container">
-      <app-budge title="Four" maticon="whatshot" modele="small-budge" [isChecked]="false"></app-budge>
-      <app-budge title="Micro-onde" maticon="microwave" modele="small-budge" [isChecked]="false"></app-budge>
-      <app-budge title="Frigo" maticon="kitchen" modele="small-budge" [isChecked]="false"></app-budge>
-      <app-budge title="Congélateur" maticon="ac_unit" modele="small-budge" [isChecked]="false"></app-budge>
-      <app-budge title="Lave-vaisselle" maticon="soap" modele="small-budge" [isChecked]="false"></app-budge>
+      <app-budge title="Four" maticon="whatshot" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
+      <app-budge title="Micro-onde" maticon="microwave" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
+      <app-budge title="Frigo" maticon="kitchen" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
+      <app-budge title="Congélateur" maticon="ac_unit" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
+      <app-budge title="Lave-vaisselle" maticon="soap" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
     </div>
     <div class="budge-container">
-      <app-budge title="Lave-linge" maticon="local_laundry_service" modele="small-budge" [isChecked]="false"></app-budge>
-      <app-budge title="Sèche-linge" maticon="dry_cleaning" modele="small-budge" [isChecked]="false"></app-budge>
-      <app-budge title="Canapé" maticon="weekend" modele="small-budge" [isChecked]="false"></app-budge>
-      <app-budge title="TV" maticon="tv" modele="small-budge" [isChecked]="false"></app-budge>
-      <app-budge title="Lit" maticon="local_hotel" modele="small-budge" [isChecked]="false"></app-budge>
+      <app-budge title="Lave-linge" maticon="local_laundry_service" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
+      <app-budge title="Sèche-linge" maticon="dry_cleaning" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
+      <app-budge title="Canapé" maticon="weekend" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
+      <app-budge title="TV" maticon="tv" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
+      <app-budge title="Lit" maticon="local_hotel" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
     </div>
     <mat-icon class="background-logo">local_laundry_service</mat-icon>
   </mat-tab>

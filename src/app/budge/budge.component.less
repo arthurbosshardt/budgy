@@ -7,15 +7,37 @@
   padding: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   height: 180px;
+  overflow: inherit;
+
+  .budge-icon {
+    color: rgba(53, 53, 53, 0.158);
+  }
+
+  .select-button {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+  }
+}
+
+.budge-content {
   overflow: hidden;
 }
 
 .unselected-budge {
-  color: rgba(53, 53, 53, 0.158);
+  color: rgba(53, 53, 53, 0.158) !important;
+
+  .budge-icon {
+    color: rgba(53, 53, 53, 0.158) !important;
+  }
 }
 
-.unselected-budge:hover {
-  color: rgba(53, 53, 53, 0.158) !important;
+.done-budge .budge-icon {
+  color: rgb(4, 190, 4);
+}
+
+.undone-budge .budge-icon {
+  color: red;
 }
 
 .budge:hover {
@@ -27,7 +49,7 @@
   min-height: 130px;
   height: 130px;
 
-  .mat-icon {
+  .budge-icon {
     width: 100%;
     font-size: 60px;
   }
@@ -40,10 +62,10 @@
 
 .medium-budge {
   width: 60%;
-  min-width: 225px;
-  min-height: 225px;
+  min-width: 220px;
+  min-height: 220px;
 
-  .mat-icon {
+  .budge-icon {
     width: 100%;
     font-size: 80px;
   }
