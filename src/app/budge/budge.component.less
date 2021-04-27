@@ -1,29 +1,52 @@
 .budge {
   text-align: center;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.089);
+  background-color: rgb(236, 236, 236);
   display: inline-block;
   border-radius: 25px;
   padding: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   height: 180px;
   overflow: hidden;
+}
 
-  .mat-icon {
-    width: 100%;
-    font-size: 80px;
-  }
+.unselected-budge {
+  color: rgba(53, 53, 53, 0.158);
+}
+
+.unselected-budge:hover {
+  color: rgba(53, 53, 53, 0.158) !important;
 }
 
 .budge:hover {
-  background-color: rgba(73, 73, 73, 0.76);
-  color: white;
+  color: black;
+}
+
+.small-budge {
+  min-width: 130px;
+  min-height: 130px;
+  height: 130px;
+
+  .mat-icon {
+    width: 100%;
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+  }
 }
 
 .medium-budge {
   width: 60%;
   min-width: 225px;
   min-height: 225px;
+
+  .mat-icon {
+    width: 100%;
+    font-size: 80px;
+  }
 }
 
 .large-budge {

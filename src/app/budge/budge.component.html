@@ -1,7 +1,14 @@
-<div class="budge" class="{{ modele }}">
+<div
+  class="budge"
+  class="{{ modele }}"
+  [ngClass]="{ 'unselected-budge': !isChecked }"
+  matRipple
+  [matRippleColor]="color"
+>
   <div class="budge-content">
+    <mat-slide-toggle [(ngModel)]="isChecked"></mat-slide-toggle>
     <h2>{{ title }}</h2>
-    <mat-icon>{{ logo }}</mat-icon>
+    <mat-icon>{{ maticon }}</mat-icon>
     <br />
     <p>{{ description }}</p>
   </div>

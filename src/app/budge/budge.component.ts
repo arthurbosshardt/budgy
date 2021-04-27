@@ -6,10 +6,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./budge.component.less']
 })
 export class BudgeComponent implements OnInit {
+  @Input() isChecked: boolean;
   @Input() title: string;
-  @Input() logo: string;
+  @Input() maticon: string;
   @Input() description: string;
   @Input() modele: string;
+  color: string = "rgba(0, 0, 0, 0.10)";
 
   constructor() { }
 
