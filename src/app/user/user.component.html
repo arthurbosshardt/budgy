@@ -13,12 +13,16 @@
     <mat-icon class="tab-icon" id="account-logo">account_circle</mat-icon>
   </div>
 </div>
-<mat-tab-group>
+<mat-tab-group dynamicHeight>
   <mat-tab>
     <ng-template mat-tab-label>
       <mat-icon class="tab-icon">lock</mat-icon>
       Mes assurances
     </ng-template>
+    <div>Assurance auto</div>
+    <div>Assurance habitation</div>
+    <div>Assurance santé</div>
+    <div>Mutuelle santé</div>
     <mat-icon class="background-logo">lock</mat-icon>
   </mat-tab>
   <mat-tab>
@@ -26,27 +30,49 @@
       <mat-icon class="tab-icon">offline_bolt</mat-icon>
       Mes fournisseurs
     </ng-template>
+    <div>Fournisseur internet</div>
+    <div>Fournisseur de gaz</div>
+    <div>Fournisseur d'électricité</div>
+    <div>Fournisseur d'eau</div>
     <mat-icon class="background-logo">offline_bolt</mat-icon>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="tab-icon">euro_symbol</mat-icon>
+      Mon argent
+    </ng-template>
+    <div>Banque</div>
+    <div>Aides publiques</div>
+    <div>Saisie des dépenses</div>
+    <mat-icon class="background-logo">euro_symbol</mat-icon>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
       <mat-icon class="tab-icon">local_laundry_service</mat-icon>
       Mes meubles
     </ng-template>
+    <div>Gazinière</div>
+    <div>Plaque électrique</div>
+    <div>Four</div>
+    <div>Micro-onde</div>
+    <div>Frigo</div>
+    <div>Congélateur</div>
+    <div>Lave-linge</div>
+    <div>Lave-vaisselle</div>
+    <div>Sèche-linge</div>
+    <div>TV</div>
+    <div>Lit</div>
+    <div>Canapé</div>
     <mat-icon class="background-logo">local_laundry_service</mat-icon>
-  </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="tab-icon">euro_symbol</mat-icon>
-      Mes aides financières
-    </ng-template>
-    <mat-icon class="background-logo">euro_symbol</mat-icon>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
       <mat-icon class="tab-icon">file_copy</mat-icon>
       Mes documents
     </ng-template>
+    <div>Factures</div>
+    <div>Relevés d'information</div>
+    <div>Espace de prise de note (identifiant compte assurance etc)</div>
     <mat-icon class="background-logo">file_copy</mat-icon>
   </mat-tab>
 </mat-tab-group>
