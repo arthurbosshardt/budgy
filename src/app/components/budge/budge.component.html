@@ -6,7 +6,7 @@
     'undone-budge': !isDone,
     'unselected-budge': !isSelected
   }"
-  *ngIf="!editMode || isSelected"
+  *ngIf="editMode || isSelected"
 >
   <div class="budge-content">
     <button
@@ -15,7 +15,7 @@
       matRipple
       [matRippleColor]="color"
       (click)="isSelected = !isSelected"
-      *ngIf="!editMode"
+      *ngIf="editMode"
     >
       <mat-icon>{{ isSelected ? "remove" : "add" }}</mat-icon>
     </button>
