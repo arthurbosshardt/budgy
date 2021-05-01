@@ -16,47 +16,29 @@
 <mat-tab-group dynamicHeight>
   <mat-tab>
     <ng-template mat-tab-label>
-      <mat-icon class="tab-icon">lock</mat-icon>
-      Mes assurances
+      <mat-icon class="tab-icon">home</mat-icon>
+      Accueil
     </ng-template>
+    <h2>Mes assurances</h2>
     <div class="budge-container">
-      <app-budge title="Assurance auto" maticon="directions_car" description="L'assurance qui couvre tes problèmes liés à ton véhicule" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
-      <app-budge title="Assurance habitation" maticon="home" description="L'assurance qui couvre tes problèmes liés à ton habitation" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
-      <app-budge title="Assurance santé" maticon="healing" description="L'assurance qui couvre tes problèmes liés à ta santé" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
-      <app-budge title="Mutuelle santé" maticon="people" description="L'organisme qui t'aide à rembourser tes traitements" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Assurance automobile" maticon="directions_car" description="Assure tes problèmes liés à ton véhicule" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Assurance habitation" maticon="home" description="Assure tes problèmes liés à ton habitation" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Assurance santé" maticon="healing" description="Assure tes problèmes liés à ta santé" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Mutuelle santé" maticon="people" description="Aide à rembourser tes traitements" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
     </div>
-    <mat-icon class="background-logo">lock</mat-icon>
-  </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="tab-icon">offline_bolt</mat-icon>
-      Mes fournisseurs
-    </ng-template>
+    <h2>Mes fournisseurs</h2>
     <div class="budge-container">
-      <app-budge title="Fournisseur internet" maticon="wifi" description="Ton fournisseur nternet" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge title="Fournisseur internet" maticon="wifi" description="Ton fournisseur internet" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
       <app-budge title="Fournisseur de gaz" maticon="whatshot" description="Ton fournisseur en gaz" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
       <app-budge title="Fournisseur d'électricité" maticon="flash_on" description="Ton fournisseur en électricité" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
       <app-budge title="Fournisseur d'eau" maticon="waves" description="Ton fournisseur en eau" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
     </div>
-    <mat-icon class="background-logo">offline_bolt</mat-icon>
-  </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="tab-icon">euro_symbol</mat-icon>
-      Mon argent
-    </ng-template>
-    <div class="budge-container">
+    <!-- <div class="budge-container">
       <app-budge title="Banque" maticon="account_balance" description="Les banques chez qui tu souhaites placer ton argent" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
       <app-budge title="Aides publiques" maticon="euro_symbol" description="Les aides publiques pour lesquelles tu peux prétendre" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
       <app-budge title="Saisie des dépenses" maticon="pie_chart" description="Un outil de saisie de tes dépenses pour gérer ton argent" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
-    </div>
-    <mat-icon class="background-logo">euro_symbol</mat-icon>
-  </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="tab-icon">local_laundry_service</mat-icon>
-      Mes meubles
-    </ng-template>
+    </div> -->
+    <h2>Mes meubles</h2>
     <div class="budge-container">
       <app-budge title="Four" maticon="whatshot" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
       <app-budge title="Micro-onde" maticon="microwave" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
@@ -71,16 +53,5 @@
       <app-budge title="TV" maticon="tv" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
       <app-budge title="Lit" maticon="local_hotel" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
     </div>
-    <mat-icon class="background-logo">local_laundry_service</mat-icon>
-  </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon class="tab-icon">file_copy</mat-icon>
-      Mes documents
-    </ng-template>
-    <div>Factures</div>
-    <div>Relevés d'information</div>
-    <div>Espace de prise de note (identifiant compte assurance etc)</div>
-    <mat-icon class="background-logo">file_copy</mat-icon>
   </mat-tab>
 </mat-tab-group>
