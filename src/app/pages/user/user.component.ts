@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-user',
@@ -8,6 +9,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 })
 export class UserComponent implements OnInit {
+  editMode = false;
 
   constructor() { }
 

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { UserComponent } from 'src/app/pages/user/user.component';
 
 @Component({
   selector: 'app-budge',
@@ -12,6 +13,7 @@ export class BudgeComponent implements OnInit {
   @Input() maticon: string;
   @Input() description: string;
   @Input() modele: string;
+  @Input() editMode: boolean;
   color: string = "rgba(0, 0, 0, 0.10)";
 
   constructor() { }
