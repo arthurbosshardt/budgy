@@ -2,12 +2,6 @@
   <mat-icon class="tab-icon" id="return-logo" routerLink="/"
     >keyboard_backspace</mat-icon
   >
-  <img
-    width="140"
-    alt="Budgy logo"
-    src="../../assets/images/budgy_big_white.png"
-    routerLink="/"
-  />
   <div id="right-top-corner-logo">
     <mat-icon class="tab-icon" id="notification-logo">notifications</mat-icon>
     <mat-icon class="tab-icon" id="account-logo">account_circle</mat-icon>
@@ -19,14 +13,14 @@
       <mat-icon class="tab-icon">home</mat-icon>
       Accueil
     </ng-template>
-    <h2>Mes assurances</h2>
+    <h2 class="category-title">🔒 Mes assurances</h2>
     <div class="budge-container">
       <app-budge title="Assurance automobile" maticon="directions_car" description="Assure tes problèmes liés à ton véhicule" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
       <app-budge title="Assurance habitation" maticon="home" description="Assure tes problèmes liés à ton habitation" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
       <app-budge title="Assurance santé" maticon="healing" description="Assure tes problèmes liés à ta santé" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
       <app-budge title="Mutuelle santé" maticon="people" description="Aide à rembourser tes traitements" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
     </div>
-    <h2>Mes fournisseurs</h2>
+    <h2 class="category-title">⚡ Mes fournisseurs</h2>
     <div class="budge-container">
       <app-budge title="Fournisseur internet" maticon="wifi" description="Ton fournisseur internet" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
       <app-budge title="Fournisseur de gaz" maticon="whatshot" description="Ton fournisseur en gaz" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
@@ -38,15 +32,13 @@
       <app-budge title="Aides publiques" maticon="euro_symbol" description="Les aides publiques pour lesquelles tu peux prétendre" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
       <app-budge title="Saisie des dépenses" maticon="pie_chart" description="Un outil de saisie de tes dépenses pour gérer ton argent" modele="medium-budge" [isDone]="false" [isSelected]="true"></app-budge>
     </div> -->
-    <h2>Mes meubles</h2>
+    <h2 class="category-title">🛋️ Mes meubles</h2>
     <div class="budge-container">
       <app-budge title="Four" maticon="whatshot" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
       <app-budge title="Micro-onde" maticon="microwave" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
       <app-budge title="Frigo" maticon="kitchen" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
       <app-budge title="Congélateur" maticon="ac_unit" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
       <app-budge title="Lave-vaisselle" maticon="soap" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
-    </div>
-    <div class="budge-container">
       <app-budge title="Lave-linge" maticon="local_laundry_service" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
       <app-budge title="Sèche-linge" maticon="dry_cleaning" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
       <app-budge title="Canapé" maticon="weekend" modele="small-budge" [isDone]="false" [isSelected]="false"></app-budge>
