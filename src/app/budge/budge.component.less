@@ -9,35 +9,91 @@
   height: 180px;
   overflow: inherit;
 
+  h2 {
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-bottom: inherit;
+  }
+
   .budge-icon {
     color: rgba(53, 53, 53, 0.158);
   }
 
   .select-button {
+    width: 25px;
+    height: 25px;
     position: absolute;
-    right: -20px;
-    top: -20px;
+    right: -10px;
+    top: -10px;
+
+    /deep/ .mat-button-wrapper {
+      display: inherit !important;
+      padding: inherit !important;
+    }
   }
+
+  /deep/
+    .mat-slide-toggle.mat-checked:not(.mat-disabled)
+    .mat-slide-toggle-bar {
+    background-color: rgba(53, 163, 53, 0.7);
+  }
+
+  /deep/
+    .mat-slide-toggle.mat-checked:not(.mat-disabled)
+    .mat-slide-toggle-thumb {
+    background-color: rgb(53, 163, 53);
+  }
+
+  /deep/ .mat-slide-toggle:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: rgba(196, 55, 55, 0.7);
+  }
+
+  /deep/ .mat-slide-toggle:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: rgb(196, 55, 55);
+  }
+}
+
+.description-budge {
+  margin-top: 5%;
+  margin-bottom: inherit;
 }
 
 .budge-content {
   overflow: hidden;
 }
 
+.isDone-title {
+  margin: inherit;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.done-budge .isDone-title {
+  color: rgb(53, 163, 53);
+}
+
+.undone-budge .isDone-title {
+  color: rgb(196, 55, 55);
+}
+
 .unselected-budge {
   color: rgba(53, 53, 53, 0.158) !important;
 
   .budge-icon {
+    color: rgba(53, 53, 53, 0.425) !important;
+  }
+
+  .isDone-title {
     color: rgba(53, 53, 53, 0.158) !important;
   }
 }
 
 .done-budge .budge-icon {
-  color: rgb(4, 190, 4);
+  color: rgb(53, 163, 53);
 }
 
 .undone-budge .budge-icon {
-  color: red;
+  color: rgb(196, 55, 55);
 }
 
 .budge:hover {
