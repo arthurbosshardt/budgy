@@ -15,7 +15,9 @@ export class BudgeComponent implements OnInit {
   @Input() modele: string;
   @Input() editMode: boolean;
   color: string = "rgba(0, 0, 0, 0.10)";
-
+  company = "GMF";
+  price = 40
+  
   constructor() { }
 
   ngOnInit(): void {
