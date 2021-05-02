@@ -10,11 +10,22 @@ import { HubComponent } from './pages/hub/hub.component';
 import { UserComponent } from './pages/user/user.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { BudgeComponent } from './components/budge/budge.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { BudgeRecapComponent } from './components/budge-recap/budge-recap.component';
 import { BudgeDetailsComponent } from './pages/budge-details/budge-details.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { StoreModule } from '@ngrx/store';
+import { StateModule } from './state/state.module';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { TodoComponent } from './components/todo/todo.component';
+import { TodoFormComponent } from './components/todo-form/todo-form.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 const routes: Routes = [
   { path: '', component: HubComponent },
@@ -36,7 +47,10 @@ const routes: Routes = [
     UserComponent,
     BudgeComponent,
     BudgeRecapComponent,
-    BudgeDetailsComponent
+    BudgeDetailsComponent,
+    TodoComponent,
+    TodoFormComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
@@ -45,11 +59,20 @@ const routes: Routes = [
     MatSlideToggleModule,
     MatButtonModule,
     MatRippleModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatTabsModule,
     FormsModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatListModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    ReactiveFormsModule,
+    StateModule.forRoot(),
+    RouterModule.forRoot(routes),
   ],
+  exports: [ MatFormFieldModule, MatInputModule ],
   providers: [],
   bootstrap: [AppComponent]
 })

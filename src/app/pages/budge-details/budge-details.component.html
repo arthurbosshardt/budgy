@@ -7,4 +7,81 @@
     <mat-icon class="tab-icon" id="account-logo">account_circle</mat-icon>
   </div>
 </div>
+<div class="change-budge-form">
+  <mat-horizontal-stepper #stepper>
+    <mat-step [stepControl]="oldBudgeFormReadOnly">
+      <form [formGroup]="oldBudgeFormReadOnly">
+        <ng-template matStepLabel>Mon budge actuel</ng-template>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="oldBudgeFormCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="newBudgeForm">
+      <form [formGroup]="newBudgeForm">
+        <ng-template matStepLabel>Mon nouveau budge</ng-template>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="newBudgeFormCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Budge modifié</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
 
+<div class="cards">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><h2>Ajouter une tâche</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-todo-form (toDoChange)="onAddToDoChange($event)"></app-todo-form>
+      <div fxLayout="row" fxLayoutAlign="end">
+        <button mat-button color="primary" (click)="addToDo()">Ajouter</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><h2>Tâches à faire</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ng-container *ngIf="incompleteToDos | async; let toDos">
+        <ng-container *ngIf="toDos.length > 0; else allDone">
+          <app-todo-list [toDos]="toDos" (toDoChange)="onCompleteToDo($event)"></app-todo-list>
+        </ng-container>
+        <ng-template #allDone>
+          <div>
+            <h4>Rien à faire</h4>
+          </div>
+        </ng-template>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><h2>Tâches effectuées</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-todo-list [toDos]="completeToDos | async" (toDoChange)="onIncompleteToDo($event)"></app-todo-list>
+    </mat-card-content>
+  </mat-card>
+</div>
