@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { BudgeRecapComponent } from './components/budge-recap/budge-recap.component';
+import { BudgeDetailsComponent } from './pages/budge-details/budge-details.component';
 
 const routes: Routes = [
   { path: '', component: HubComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
     HubComponent,
     UserComponent,
     BudgeComponent,
-    BudgeRecapComponent
+    BudgeRecapComponent,
+    BudgeDetailsComponent
   ],
   imports: [
     BrowserModule,
