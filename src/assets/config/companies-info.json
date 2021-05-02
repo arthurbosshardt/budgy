@@ -1,0 +1,47 @@
+[
+    {
+        "company_name": "GMF",
+        "url_website": "https://espace-assure.gmf.fr/pointentree/client/homepage",
+        "url_logo": "https://upload.wikimedia.org/wikipedia/fr/9/99/GMF_logo.svg"            
+    },
+    {
+        "company_name": "MAIF",
+        "url_website": "https://espacepersonnel.maif.fr/accueil",
+        "url_logo": "https://upload.wikimedia.org/wikipedia/fr/4/4d/Logo_Maif_1994.svg"            
+    },
+    {
+        "company_name": "DIRECT-ASSURANCE",
+        "url_website": "https://www.direct-assurance.fr/",
+        "url_logo": "https://upload.wikimedia.org/wikipedia/fr/4/45/Direct_Assurance_logo_2009.png"            
+    },
+    {
+        "company_name": "MACIF",
+        "url_website": "https://www.macif.fr/assurance/particuliers/",
+        "url_logo": "https://upload.wikimedia.org/wikipedia/fr/2/2a/Logo_Macif.svg"            
+    },
+    {
+        "company_name": "HARMONIE",
+        "url_website": "https://harmonie-et-moi.fr/",
+        "url_logo": "https://www.harmonie-mutuelle.fr/documents/11132/27434619/Logo-HD-HM-VYV-carre/8f147cad-8b5c-4dac-9c51-bd7afdf2a266?t=1516964397675"            
+    },
+    {
+        "company_name": "BOUYGUES",
+        "url_website": "https://www.bouyguestelecom.fr/mon-compte/dashboard",
+        "url_logo": "https://www.corporate.bouyguestelecom.fr/wp-content/uploads/2019/01/LogoMini_BT.jpg"            
+    },
+    {
+        "company_name": "ORANGE",
+        "url_website": "https://www.orange.fr/portail",
+        "url_logo": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Orange_logo.svg"            
+    },
+    {
+        "company_name": "EDF",
+        "url_website": "https://www.edf.fr/",
+        "url_logo": "https://brandslogos.com/wp-content/uploads/images/large/edf-logo.png"            
+    },
+    {
+        "company_name": "TOTAL-DIRECT-ENERGIE",
+        "url_website": "https://total.direct-energie.com",
+        "url_logo": "https://selectra.info/sites/default/files/images/logo_fournisseurs/logo_total.png"            
+    }         
+]

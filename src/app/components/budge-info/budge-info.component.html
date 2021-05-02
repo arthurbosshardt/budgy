@@ -3,9 +3,8 @@
         <!-- <h1 class="company-name">{{ company }}</h1> -->
         <img
             class="company-img"
-            width="50"
             alt="{{ company }}"
-            src="../../../assets/images/companies/{{ company }}.png"
+            src="{{ getCompanyLogoUrl() }}"
         />
         <div class="price"><b>{{ price }}</b><span>€/mois</span></div>
     </div>
