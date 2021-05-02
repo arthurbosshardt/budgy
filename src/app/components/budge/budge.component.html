@@ -13,7 +13,6 @@
       class="edit-button"
       mat-mini-fab
       matRipple
-      [matRippleColor]="color"
       (click)="isSelected = !isSelected"
       *ngIf="editMode"
     >
@@ -29,5 +28,11 @@
     <h2>{{ title }}</h2>
     <mat-icon class="budge-icon">{{ maticon }}</mat-icon>
   </div>
-  <app-budge-info *ngIf="(modele != 'small-budge') && isSelected" company="{{company}}" [price]="price"></app-budge-info>
+  <div class="budge-recap">
+    <app-budge-info
+      *ngIf="modele != 'small-budge' && isSelected"
+      company="{{ company }}"
+      [price]="price"
+    ></app-budge-info>
+  </div>
 </div>

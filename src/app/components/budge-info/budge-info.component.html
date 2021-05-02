@@ -1,11 +1,15 @@
 <div class="budge-info">
-    <div class="budge-info-content">
-        <!-- <h1 class="company-name">{{ company }}</h1> -->
+  <div class="budge-info-content">
+    <a href="{{ getCompanyWebsiteUrl() }}">
         <img
-            class="company-img"
-            alt="{{ company }}"
-            src="{{ getCompanyLogoUrl() }}"
+        class="company-img"
+        alt="{{ company }}"
+        src="{{ getCompanyLogoUrl() }}"
         />
-        <div class="price"><b>{{ price }}</b><span>€/mois</span></div>
+    </a>
+    <div class="price">
+      <b>{{ price }}</b
+      ><span>€/mois</span>
     </div>
+  </div>
 </div>
