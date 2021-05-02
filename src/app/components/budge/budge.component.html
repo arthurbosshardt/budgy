@@ -28,10 +28,10 @@
     <mat-icon class="budge-icon">{{ maticon }}</mat-icon>
   </div>
   <div class="budge-recap">
-    <app-budge-info
+    <app-budge-recap
       *ngIf="modele != 'small-budge' && isSelected"
       company="{{ company }}"
       [price]="price"
-    ></app-budge-info>
+    ></app-budge-recap>
   </div>
 </div>

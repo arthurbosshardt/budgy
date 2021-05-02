@@ -13,7 +13,7 @@ import { BudgeComponent } from './components/budge/budge.component';
 import { FormsModule } from '@angular/forms';
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
-import { BudgeInfoComponent } from './components/budge-info/budge-info.component';
+import { BudgeRecapComponent } from './components/budge-recap/budge-recap.component';
 
 const routes: Routes = [
   { path: '', component: HubComponent },
@@ -26,7 +26,7 @@ const routes: Routes = [
     HubComponent,
     UserComponent,
     BudgeComponent,
-    BudgeInfoComponent
+    BudgeRecapComponent
   ],
   imports: [
     BrowserModule,

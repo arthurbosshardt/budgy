@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import companies from '../../../assets/config/companies-info.json';
 
 @Component({
-  selector: 'app-budge-info',
-  templateUrl: './budge-info.component.html',
-  styleUrls: ['./budge-info.component.less']
+  selector: 'app-budge-recap',
+  templateUrl: './budge-recap.component.html',
+  styleUrls: ['./budge-recap.component.less']
 })
-export class BudgeInfoComponent implements OnInit {
+export class BudgeRecapComponent implements OnInit {
   @Input() company: string;
   @Input() price: number;
   public companies:{company_name:string, url_website:string, url_logo:string}[] = companies;

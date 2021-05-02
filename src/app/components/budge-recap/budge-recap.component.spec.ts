@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BudgeInfoComponent } from './budge-info.component';
+import { BudgeRecapComponent } from './budge-recap.component';
 
-describe('BudgeInfoComponent', () => {
-  let component: BudgeInfoComponent;
-  let fixture: ComponentFixture<BudgeInfoComponent>;
+describe('BudgeRecapComponent', () => {
+  let component: BudgeRecapComponent;
+  let fixture: ComponentFixture<BudgeRecapComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BudgeInfoComponent ]
+      declarations: [ BudgeRecapComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BudgeInfoComponent);
+    fixture = TestBed.createComponent(BudgeRecapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
