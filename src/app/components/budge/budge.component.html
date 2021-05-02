@@ -7,23 +7,23 @@
     'unselected-budge': !isSelected
   }"
 >
-  <div class="budge-content">
-    <button
-      class="edit-button"
-      mat-mini-fab
-      matRipple
-      (click)="isSelected = !isSelected"
-      *ngIf="editMode"
-    >
-      <mat-icon>{{ isSelected ? "remove" : "add" }}</mat-icon>
-    </button>
-    <p class="isDone-title">
-      {{ isDone ? "Tout est ok !" : "Actions à faire" }}
-    </p>
-    <mat-slide-toggle
-      [(ngModel)]="isDone"
-      [disabled]="!isSelected"
-    ></mat-slide-toggle>
+  <p class="isDone-title">
+    {{ isDone ? "Tout est ok !" : "Actions à faire" }}
+  </p>
+  <mat-slide-toggle
+    [(ngModel)]="isDone"
+    [disabled]="!isSelected"
+  ></mat-slide-toggle>
+  <button
+    class="edit-button"
+    mat-mini-fab
+    matRipple
+    (click)="isSelected = !isSelected"
+    *ngIf="editMode"
+  >
+    <mat-icon>{{ isSelected ? "remove" : "add" }}</mat-icon>
+  </button>
+  <div class="budge-content" routerLink="/{{ type }}">
     <h2>{{ title }}</h2>
     <mat-icon class="budge-icon">{{ maticon }}</mat-icon>
   </div>

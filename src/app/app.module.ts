@@ -19,6 +19,14 @@ import { BudgeDetailsComponent } from './pages/budge-details/budge-details.compo
 const routes: Routes = [
   { path: '', component: HubComponent },
   { path: 'user', component: UserComponent },
+  { path: 'assurance-voiture', component: BudgeDetailsComponent },
+  { path: 'assurance-habitation', component: BudgeDetailsComponent },
+  { path: 'assurance-sante', component: BudgeDetailsComponent },
+  { path: 'mutuelle-sante', component: BudgeDetailsComponent },
+  { path: 'fournisseur-internet', component: BudgeDetailsComponent },
+  { path: 'fournisseur-gaz', component: BudgeDetailsComponent },
+  { path: 'fournisseur-electricite', component: BudgeDetailsComponent },
+  { path: 'fournisseur-eau', component: BudgeDetailsComponent },
 ]
 
 @NgModule({

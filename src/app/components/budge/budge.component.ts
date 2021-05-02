@@ -15,6 +15,7 @@ export class BudgeComponent implements OnInit {
   @Input() modele: string;
   @Input() editMode: boolean;
   @Input() company: string;
+  @Input() type: string;
   price = 40
   
   constructor() { }
