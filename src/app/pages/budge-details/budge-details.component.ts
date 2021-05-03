@@ -19,9 +19,7 @@ export class BudgeDetailsComponent implements OnInit {
   type: string;
   icon: string;
   completeToDos: Observable<Array<ToDo>>;
-
   incompleteToDos: Observable<Array<ToDo>>;
-
   private _toDo: Partial<ToDo>;
   sub: any;
 
