@@ -18,7 +18,6 @@ import { BudgeDetailsComponent } from './pages/budge-details/budge-details.compo
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { StoreModule } from '@ngrx/store';
 import { StateModule } from './state/state.module';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatListModule } from '@angular/material/list';
@@ -28,16 +27,16 @@ import { TodoFormComponent } from './components/todo-form/todo-form.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 const routes: Routes = [
-  { path: '', component: HubComponent },
-  { path: 'user', component: UserComponent },
-  { path: 'assurance-voiture', component: BudgeDetailsComponent },
-  { path: 'assurance-habitation', component: BudgeDetailsComponent },
-  { path: 'assurance-sante', component: BudgeDetailsComponent },
-  { path: 'mutuelle-sante', component: BudgeDetailsComponent },
-  { path: 'fournisseur-internet', component: BudgeDetailsComponent },
-  { path: 'fournisseur-gaz', component: BudgeDetailsComponent },
-  { path: 'fournisseur-electricite', component: BudgeDetailsComponent },
-  { path: 'fournisseur-eau', component: BudgeDetailsComponent },
+  { path: '', component: HubComponent, data : {type_name : 'Accueil', icon_name: 'home'}},
+  { path: 'user', component: UserComponent, data : {type_name : 'Page utilisateur', icon_name: 'user'}},
+  { path: 'assurance-voiture', component: BudgeDetailsComponent, data : {type_name : 'Assurance auto', icon_name: 'directions_car'}},
+  { path: 'assurance-habitation', component: BudgeDetailsComponent, data : {type_name : 'Assurance habitation', icon_name: 'home'}},
+  { path: 'assurance-sante', component: BudgeDetailsComponent, data : {type_name : 'Assurance santé', icon_name: 'healing'}},
+  { path: 'mutuelle-sante', component: BudgeDetailsComponent, data : {type_name : 'Mutuelle santé', icon_name: 'people'}},
+  { path: 'fournisseur-internet', component: BudgeDetailsComponent, data : {type_name : 'Fournisseur internet', icon_name: 'wifi'}},
+  { path: 'fournisseur-gaz', component: BudgeDetailsComponent, data : {type_name : 'Fournisseur gaz', icon_name: 'whatshot'}},
+  { path: 'fournisseur-electricite', component: BudgeDetailsComponent, data : {type_name : 'Fournisseur électricité', icon_name: 'flash_on'}},
+  { path: 'fournisseur-eau', component: BudgeDetailsComponent, data : {type_name : 'Fournisseur eau', icon_name: 'waves'}},
 ]
 
 @NgModule({

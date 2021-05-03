@@ -7,6 +7,9 @@
     <mat-icon class="tab-icon" id="account-logo">account_circle</mat-icon>
   </div>
 </div>
+<div class="title-details">
+  <h1><mat-icon>{{ this.icon }}</mat-icon> {{ this.type }}  <mat-icon>{{ this.icon }}</mat-icon></h1>
+</div>
 <div class="change-budge-form">
   <mat-horizontal-stepper #stepper>
     <mat-step [stepControl]="oldBudgeFormReadOnly">
@@ -14,7 +17,12 @@
         <ng-template matStepLabel>Mon budge actuel</ng-template>
         <mat-form-field>
           <mat-label>Name</mat-label>
-          <input matInput placeholder="Last name, First name" formControlName="oldBudgeFormCtrl" required>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="oldBudgeFormCtrl"
+            required
+          />
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -26,8 +34,12 @@
         <ng-template matStepLabel>Mon nouveau budge</ng-template>
         <mat-form-field>
           <mat-label>Address</mat-label>
-          <input matInput formControlName="newBudgeFormCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                required>
+          <input
+            matInput
+            formControlName="newBudgeFormCtrl"
+            placeholder="Ex. 1 Main St, New York, NY"
+            required
+          />
         </mat-form-field>
         <div>
           <button mat-button matStepperPrevious>Back</button>
@@ -65,7 +77,10 @@
     <mat-card-content>
       <ng-container *ngIf="incompleteToDos | async; let toDos">
         <ng-container *ngIf="toDos.length > 0; else allDone">
-          <app-todo-list [toDos]="toDos" (toDoChange)="onCompleteToDo($event)"></app-todo-list>
+          <app-todo-list
+            [toDos]="toDos"
+            (toDoChange)="onCompleteToDo($event)"
+          ></app-todo-list>
         </ng-container>
         <ng-template #allDone>
           <div>
@@ -81,7 +96,10 @@
       <mat-card-title><h2>Tâches effectuées</h2></mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <app-todo-list [toDos]="completeToDos | async" (toDoChange)="onIncompleteToDo($event)"></app-todo-list>
+      <app-todo-list
+        [toDos]="completeToDos | async"
+        (toDoChange)="onIncompleteToDo($event)"
+      ></app-todo-list>
     </mat-card-content>
   </mat-card>
 </div>
