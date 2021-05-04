@@ -8,21 +8,37 @@
   </div>
 </div>
 <div class="title-details">
-  <h1><mat-icon>{{ this.icon }}</mat-icon> {{ this.type }}  <mat-icon>{{ this.icon }}</mat-icon></h1>
+  <h1>
+    <mat-icon>{{ this.icon }}</mat-icon> {{ this.type }}
+    <mat-icon>{{ this.icon }}</mat-icon>
+  </h1>
 </div>
 <div class="change-budge-form">
   <mat-horizontal-stepper #stepper>
     <mat-step [stepControl]="oldBudgeFormReadOnly">
       <form [formGroup]="oldBudgeFormReadOnly">
-        <ng-template matStepLabel>Mon <strong>budge</strong> actuel</ng-template>
+        <ng-template matStepLabel
+          >Mon <strong>budge</strong> actuel</ng-template
+        >
         <mat-form-field>
-          <mat-label>Name</mat-label>
-          <input
-            matInput
-            placeholder="Last name, First name"
-            formControlName="oldBudgeFormCtrl"
-            required
-          />
+          <mat-label>Nom de la compagnie</mat-label>
+          <mat-select [(value)]="selectedCompany">
+            <mat-option
+              *ngFor="let company of companies"
+              [value]="company.company_name"
+              >{{ company.company_name }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Jour de prélèvement</mat-label>
+          <input matInput type="number" required />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Prix mensuel</mat-label>
+          <input matInput type="number" required />
         </mat-form-field>
         <div>
           <button mat-raised-button matStepperNext>Modifier</button>
@@ -31,25 +47,37 @@
     </mat-step>
     <mat-step [stepControl]="newBudgeForm">
       <form [formGroup]="newBudgeForm">
-        <ng-template matStepLabel>Mon nouveau <strong>budge</strong></ng-template>
+        <ng-template matStepLabel
+          >Mon <strong>budge</strong> actuel</ng-template
+        >
         <mat-form-field>
-          <mat-label>Address</mat-label>
-          <input
-            matInput
-            formControlName="newBudgeFormCtrl"
-            placeholder="Ex. 1 Main St, New York, NY"
-            required
-          />
+          <mat-label>Nom de la compagnie</mat-label>
+          <mat-select [(value)]="selectedCompany">
+            <mat-option
+              *ngFor="let company of companies"
+              [value]="company.company_name"
+              >{{ company.company_name }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Jour de prélèvement</mat-label>
+          <input matInput type="number" required />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Prix mensuel</mat-label>
+          <input matInput type="number" required />
         </mat-form-field>
         <div>
-          <button mat-raised-button matStepperPrevious>Annuler</button>
-          <button mat-raised-button matStepperNext>Confirmer</button>
+          <button mat-raised-button matStepperNext>Modifier</button>
         </div>
       </form>
     </mat-step>
     <mat-step>
       <ng-template matStepLabel><strong>Budge</strong> modifié</ng-template>
-      <p>You are now done.</p>
+      <p>Le <strong>Budge</strong> a été modifié</p>
       <div>
         <button mat-raised-button matStepperPrevious>Modifier</button>
       </div>

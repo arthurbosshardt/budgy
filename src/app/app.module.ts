@@ -22,6 +22,7 @@ import { StateModule } from './state/state.module';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 import { TodoComponent } from './components/todo/todo.component';
 import { TodoFormComponent } from './components/todo-form/todo-form.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
@@ -57,6 +58,7 @@ const routes: Routes = [
     MatIconModule,
     MatSlideToggleModule,
     MatButtonModule,
+    MatSelectModule,
     MatRippleModule,
     MatStepperModule,
     MatFormFieldModule,
