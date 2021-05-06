@@ -1,14 +1,12 @@
-<div class="toolbar" role="banner">
-  <mat-icon class="tab-icon" id="return-logo" routerLink="/"
-    >keyboard_backspace</mat-icon
-  >
-  <div id="right-top-corner-logo">
-    <mat-icon class="tab-icon" id="edit-logo" (click)="editMode = !editMode"
-      >edit</mat-icon
-    >
-    <mat-icon class="tab-icon" id="notification-logo">notifications</mat-icon>
-    <mat-icon class="tab-icon" id="account-logo">account_circle</mat-icon>
-  </div>
+<header id="header">
+  <a class="logo" routerLink="/">Budgy</a>
+  <ul>
+    <li><a routerLink="/">Accueil</a></li>
+    <li><a routerLink="/user" class="active">Inscription</a></li>
+  </ul>
+</header>
+<div id="edit-logo-container">
+  <mat-icon id="edit-logo" (click)="editMode = !editMode">edit</mat-icon>
 </div>
 <mat-tab-group dynamicHeight>
   <mat-tab>

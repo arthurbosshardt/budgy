@@ -36,6 +36,13 @@ export class BudgeDetailsComponent implements OnInit {
         this.icon = data.icon_name;
       });
 
+    this.oldBudgeFormReadOnly = this._formBuilder.group({
+      oldBudgeFormCtrl: ['', Validators.required]
+    });
+    this.newBudgeForm= this._formBuilder.group({
+      newBudgeFormCtrl: ['', Validators.required]
+    });
+
     generateToDos().forEach(todo => this.store.dispatch(new AddToDo(todo)));
     this.completeToDos = this.store.pipe(select(completeToDos));
     this.incompleteToDos = this.store.pipe(select(incompleteToDos));
