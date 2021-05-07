@@ -10,7 +10,8 @@
 
 #header {
   box-sizing: border-box;
-  background-color: #26b1e7;
+  background-color: #26b0e7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
 }
 #header {
   position: absolute;
@@ -54,11 +55,12 @@
   overflow-x: hidden;
   background: #26b1e7;
   min-height: 100vh;
+  z-index: -100;
 }
 section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +71,7 @@ section::before {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 100vh;
   background: linear-gradient(to top, #094b65, transparent);
   z-index: 10;
 }
@@ -83,19 +85,23 @@ section img {
   pointer-events: none;
 }
 section #text {
-  position: absolute;
+  position: fixed;
   color: #094b65;
   font-size: 10em;
   text-align: center;
   line-height: 0.55em;
   font-family: "Permanent Marker", cursive;
-  transform: translateY(-160%);
+  transform: translateY(-350%);
 }
 section #text span {
   font-size: 0.2em;
   letter-spacing: 2px;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
+}
+section #text img {
+  transform: translateY(40%);
+  height: auto;
 }
 #btn {
   text-decoration: none;
@@ -107,7 +113,7 @@ section #text span {
   font-weight: 500;
   letter-spacing: 2px;
   border-radius: 40px;
-  transform: translateY(100px);
+  transform: translateY(300px);
   z-index: 10000;
 }
 .sec {
@@ -120,7 +126,70 @@ section #text span {
   color: white;
   margin-bottom: 10px;
 }
-.sec p {
+.sec ul {
   font-size: 1em;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec ul li {
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 0% 2%;
+  text-align: left;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+  background: #094b65;
+  color: white;
+}
+
+#features {
+  counter-reset: counter-features;
+}
+
+.feature {
+  position: relative;
+  justify-content: center;
+}
+
+.feature::before {
+  counter-increment: counter-features;
+  content: counter(counter-features);
+  top: -3.5em;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  margin-left: 30%;
+  color: #094b65;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.feature::after {
+  content: attr(li-title);
+  top: -4em;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  color: #ffff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 2em;
+  font-family: 1000;
+  font-family: "Poppins", sans-serif;
+  z-index: 1000;
 }
