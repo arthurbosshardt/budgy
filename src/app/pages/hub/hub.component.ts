@@ -23,7 +23,7 @@ export class HubComponent implements OnInit {
           let value = window.scrollY;
           clouds.style.top = value * -1.5 + 'px';
           sun.style.top = value * -1.5 + 'px';
-          btn.style.marginTop = value * 0.7 + 'px';
+          btn.style.marginTop = value * 0.2 + 'px';
           hills.style.top = value * -0.2 + 'px';
           header.style.top = value * -0.2 + 'px';
         })
