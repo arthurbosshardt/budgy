@@ -1,6 +1,6 @@
 import { State } from '../../state/state.interface';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { generateToDos, ToDo } from '../../state/todo/todo.model';
@@ -8,6 +8,7 @@ import { AddToDo, CompleteToDo, IncompleteToDo } from '../../state/todo/todo.act
 import { completeToDos, incompleteToDos } from '../../state/todo';
 import { ActivatedRoute } from '@angular/router';
 import companies from '../../../assets/config/companies-info.json';
+import { BudgeInfoClassic } from '../../models/budge-info';
 
 @Component({
   selector: 'app-budge-details',
@@ -23,10 +24,11 @@ export class BudgeDetailsComponent implements OnInit {
   incompleteToDos: Observable<Array<ToDo>>;
   private _toDo: Partial<ToDo>;
   sub: any;
+  infoUser: Array<BudgeInfoClassic>;
   public companies:{company_name:string, url_website:string, url_logo:string}[] = companies;
-  selectedCompany = this.companies[0].company_name;
+  budgeInfos = new BudgeInfoClassic("", "", 0, 0);
 
-  constructor(private _formBuilder: FormBuilder, private store: Store<State>, private _router: ActivatedRoute) { }
+  constructor(private store: Store<State>, private _router: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.sub = this._router
@@ -35,13 +37,8 @@ export class BudgeDetailsComponent implements OnInit {
         this.type = data.type_name;
         this.icon = data.icon_name;
       });
-
-    this.oldBudgeFormReadOnly = this._formBuilder.group({
-      oldBudgeFormCtrl: ['', Validators.required]
-    });
-    this.newBudgeForm= this._formBuilder.group({
-      newBudgeFormCtrl: ['', Validators.required]
-    });
+    this.infoUser = JSON.parse(localStorage.getItem('budgeInfo'));
+    this.budgeInfos = this.infoUser.filter(x => x.type == this.type)[0];
 
     generateToDos().forEach(todo => this.store.dispatch(new AddToDo(todo)));
     this.completeToDos = this.store.pipe(select(completeToDos));
@@ -50,6 +47,18 @@ export class BudgeDetailsComponent implements OnInit {
 
   ngOnDestroy() {
     this.sub.unsubscribe();
+  }
+
+  saveBudgeInfos() {
+    this.infoUser = this.infoUser.filter(x => x.type != this.type)
+    var infoUserToSend = {
+      type: this.budgeInfos.type,
+      company_name: this.budgeInfos.company_name,
+      sampling_day: this.budgeInfos.sampling_day,
+      price: this.budgeInfos.price
+    };
+    this.infoUser.push(infoUserToSend);
+    localStorage.setItem('budgeInfo', JSON.stringify(this.infoUser));
   }
 
   addToDo() {
@@ -70,9 +79,5 @@ export class BudgeDetailsComponent implements OnInit {
 
   onIncompleteToDo(toDo: ToDo) {
     this.store.dispatch(new IncompleteToDo(toDo));
-  }
-
-  selectCompany(event: Event) {
-    this.selectedCompany = (event.target as HTMLSelectElement).value;
   }
 }

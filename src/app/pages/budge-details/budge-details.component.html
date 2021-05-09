@@ -13,44 +13,38 @@
 </div>
 <div class="change-budge-form">
   <mat-horizontal-stepper #stepper>
-    <mat-step [stepControl]="oldBudgeFormReadOnly">
-      <form [formGroup]="oldBudgeFormReadOnly">
+    <mat-step>
+      <form>
         <ng-template matStepLabel
           >Mon <strong>budge</strong> actuel</ng-template
         >
         <mat-form-field>
           <mat-label>Nom de la compagnie</mat-label>
-          <mat-select [(value)]="selectedCompany">
-            <mat-option
-              *ngFor="let company of companies"
-              [value]="company.company_name"
-              >{{ company.company_name }}</mat-option
-            >
-          </mat-select>
+          <input matInput type="text" [(value)]="this.budgeInfos.company_name" readonly />
         </mat-form-field>
         <br />
         <mat-form-field>
           <mat-label>Jour de prélèvement</mat-label>
-          <input matInput type="number" required />
+          <input matInput type="number" min="1" max="31" [(value)]="this.budgeInfos.sampling_day" readonly />
         </mat-form-field>
         <br />
         <mat-form-field>
           <mat-label>Prix mensuel</mat-label>
-          <input matInput type="number" required />
+          <input matInput type="number" [(value)]="this.budgeInfos.price" readonly />
         </mat-form-field>
         <div>
           <button mat-raised-button matStepperNext>Modifier</button>
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="newBudgeForm">
-      <form [formGroup]="newBudgeForm">
+    <mat-step>
+      <form>
         <ng-template matStepLabel
           >Mon <strong>budge</strong> actuel</ng-template
         >
         <mat-form-field>
           <mat-label>Nom de la compagnie</mat-label>
-          <mat-select [(value)]="selectedCompany">
+          <mat-select name="company_name" [(ngModel)]="this.budgeInfos.company_name" [(value)]="this.budgeInfos.company_name">
             <mat-option
               *ngFor="let company of companies"
               [value]="company.company_name"
@@ -61,15 +55,15 @@
         <br />
         <mat-form-field>
           <mat-label>Jour de prélèvement</mat-label>
-          <input matInput type="number" required />
+          <input matInput type="number" min="1" max="31" name="sampling_day" [(ngModel)]="this.budgeInfos.sampling_day" />
         </mat-form-field>
         <br />
         <mat-form-field>
           <mat-label>Prix mensuel</mat-label>
-          <input matInput type="number" required />
+          <input matInput type="number" name="price" [(ngModel)]="this.budgeInfos.price" />
         </mat-form-field>
         <div>
-          <button mat-raised-button matStepperNext>Modifier</button>
+          <button mat-raised-button matStepperNext (click)="saveBudgeInfos()">Modifier</button>
         </div>
       </form>
     </mat-step>

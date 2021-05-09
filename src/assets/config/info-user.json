@@ -1,0 +1,50 @@
+[
+  {
+    "type": "Assurance auto",
+    "company_name": "GMF",
+    "sampling_day": 4,
+    "price": 34.99
+  },
+  {
+    "type": "Assurance habitation",
+    "company_name": "MAIF",
+    "sampling_day": 6,
+    "price": 9
+  },
+  {
+    "type": "Assurance santé",
+    "company_name": "MACIF",
+    "sampling_day": 7,
+    "price": 30.99
+  },
+  {
+    "type": "Mutuelle santé",
+    "company_name": "Harmonie",
+    "sampling_day": 2,
+    "price": 33.99
+  },
+  {
+    "type": "Fournisseur internet",
+    "company_name": "Sosh",
+    "sampling_day": 18,
+    "price": 19.99
+  },
+  {
+    "type": "Fournisseur gaz",
+    "company_name": "EDF",
+    "sampling_day": 12,
+    "price": 85
+  },
+  {
+    "type": "Fournisseur électricité",
+    "company_name": "EDF",
+    "sampling_day": 12,
+    "price": 85
+  },
+  {
+    "type": "Fournisseur eau",
+    "company_name": "Service publique",
+    "sampling_day": 0,
+    "price": 0
+  }
+]
