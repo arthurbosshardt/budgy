@@ -44,26 +44,35 @@
   background: #094b65;
   color: white;
 }
+
 .change-budge-form {
-  top: 0;
+  display: block;
 }
 
 .title-details {
+  position: relative;
   margin-top: 140px;
-  text-align: center;
-  height: 50px;
-  line-height: 50px;
+  width: 50%;
+  margin-left: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   text-transform: uppercase;
   font-size: 20px;
 
   h1 {
-    width: auto;
+    min-width: fit-content;
+    color: #094b65;
   }
 
   .mat-icon {
     font-size: 50px;
     width: auto;
     height: auto;
+    background-color: #094b65;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
   }
 }
 
@@ -71,32 +80,11 @@
   width: 50px !important;
 }
 
-#return-logo {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  font-size: 40px;
-  height: 70px;
-  line-height: 70px;
-}
-
-#right-top-corner-logo {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-
-  .mat-icon {
-    font-size: 40px;
-    height: 70px;
-    line-height: 70px;
-  }
-}
-
 .mat-stepper-horizontal {
   background-color: rgba(236, 236, 236);
   width: 80%;
   margin-left: 10%;
-  margin-top: 10%;
+  margin-top: 20px;
   border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
 }

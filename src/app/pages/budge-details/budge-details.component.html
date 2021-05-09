@@ -6,10 +6,11 @@
   </ul>
 </header>
 <div class="title-details">
+  <mat-icon>{{ this.icon }}</mat-icon> 
   <h1>
-    <mat-icon>{{ this.icon }}</mat-icon> {{ this.type }}
-    <mat-icon>{{ this.icon }}</mat-icon>
+    {{ this.type }}
   </h1>
+  <mat-icon>{{ this.icon }}</mat-icon>
 </div>
 <div class="change-budge-form">
   <mat-horizontal-stepper #stepper>
@@ -63,7 +64,7 @@
           <input matInput type="number" name="price" [(ngModel)]="this.budgeInfos.price" />
         </mat-form-field>
         <div>
-          <button mat-raised-button matStepperNext (click)="saveBudgeInfos()">Modifier</button>
+          <button mat-raised-button matStepperNext (click)="saveBudgeInfos()">Confirmer</button>
         </div>
       </form>
     </mat-step>
@@ -71,7 +72,7 @@
       <ng-template matStepLabel><strong>Budge</strong> modifié</ng-template>
       <p>Le <strong>Budge</strong> a été modifié</p>
       <div>
-        <button mat-raised-button matStepperPrevious>Modifier</button>
+        <button mat-raised-button matStepperPrevious routerLink="/user">Revenir sur ton tableau de bord</button>
       </div>
     </mat-step>
   </mat-horizontal-stepper>
