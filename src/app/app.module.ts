@@ -13,7 +13,6 @@ import { BudgeComponent } from './components/budge/budge.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
-import { BudgeRecapComponent } from './components/budge-recap/budge-recap.component';
 import { BudgeDetailsComponent } from './pages/budge-details/budge-details.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -46,7 +45,6 @@ const routes: Routes = [
     HubComponent,
     UserComponent,
     BudgeComponent,
-    BudgeRecapComponent,
     BudgeDetailsComponent,
     TodoComponent,
     TodoFormComponent,

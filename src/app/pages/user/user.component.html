@@ -23,7 +23,8 @@
         description="Assure tes problèmes liés à ton véhicule"
         modele="medium-budge"
         type="assurance-voiture"
-        company="GMF"
+        [price]="getPrice('Assurance auto')"
+        [company]="getCompanyName('Assurance auto')"
         [editMode]="editMode"
         [isDone]="false"
         [isSelected]="true"
@@ -35,7 +36,8 @@
         description="Assure tes problèmes liés à ton habitation"
         modele="medium-budge"
         type="assurance-habitation"
-        company="DIRECT-ASSURANCE"
+        [price]="getPrice('Assurance habitation')"
+        [company]="getCompanyName('Assurance habitation')"
         [editMode]="editMode"
         [isDone]="true"
         [isSelected]="true"
@@ -47,7 +49,8 @@
         description="Assure tes problèmes liés à ta santé"
         modele="medium-budge"
         type="assurance-sante"
-        company="MACIF"
+        [price]="getPrice('Assurance santé')"
+        [company]="getCompanyName('Assurance santé')"
         [editMode]="editMode"
         [isDone]="true"
         [isSelected]="true"
@@ -59,7 +62,8 @@
         description="Aide à rembourser tes traitements"
         modele="medium-budge"
         type="mutuelle-sante"
-        company="HARMONIE"
+        [price]="getPrice('Mutuelle santé')"
+        [company]="getCompanyName('Mutuelle santé')"
         [editMode]="editMode"
         [isDone]="false"
         [isSelected]="true"
@@ -74,7 +78,8 @@
         description="Ton fournisseur internet"
         modele="medium-budge"
         type="fournisseur-internet"
-        company="ORANGE"
+        [price]="getPrice('Fournisseur internet')"
+        [company]="getCompanyName('Fournisseur internet')"
         [editMode]="editMode"
         [isDone]="false"
         [isSelected]="true"
@@ -86,7 +91,8 @@
         description="Ton fournisseur en gaz"
         modele="medium-budge"
         type="fournisseur-gaz"
-        company="EDF"
+        [price]="getPrice('Fournisseur gaz')"
+        [company]="getCompanyName('Fournisseur gaz')"
         [editMode]="editMode"
         [isDone]="true"
         [isSelected]="true"
@@ -98,7 +104,8 @@
         description="Ton fournisseur en électricité"
         modele="medium-budge"
         type="fournisseur-electricite"
-        company="TOTAL-DIRECT-ENERGIE"
+        [price]="getPrice('Fournisseur électricité')"
+        [company]="getCompanyName('Fournisseur électricité')"
         [editMode]="editMode"
         [isDone]="false"
         [isSelected]="false"
@@ -110,16 +117,17 @@
         description="Ton fournisseur en eau"
         modele="medium-budge"
         type="fournisseur-eau"
-        company="TOTAL-DIRECT-ENERGIE"
+        [price]="getPrice('Fournisseur eau')"
+        [company]="getCompanyName('Fournisseur eau')"
         [editMode]="editMode"
         [isDone]="false"
         [isSelected]="true"
       ></app-budge>
     </div>
     <!-- <div class="budge-container">
-      <app-budge class="app-budge" title="Banque" maticon="account_balance" description="Les banques chez qui tu souhaites placer ton argent" modele="medium-budge" type="banque" company="GMF" [editMode]="editMode" [isDone]="false" [isSelected]="true"></app-budge>
-      <app-budge class="app-budge" title="Aides publiques" maticon="euro_symbol" description="Les aides publiques pour lesquelles tu peux prétendre" modele="medium-budge" type="aides-publiques" company="GMF" [editMode]="editMode" [isDone]="false" [isSelected]="true"></app-budge>
-      <app-budge class="app-budge" title="Saisie des dépenses" maticon="pie_chart" description="Un outil de saisie de tes dépenses pour gérer ton argent" modele="medium-budge" type="saisie-depenses" company="GMF" [editMode]="editMode" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge class="app-budge" title="Banque" maticon="account_balance" description="Les banques chez qui tu souhaites placer ton argent" modele="medium-budge" type="banque" [price]="getPrice('Assurance habitation')" [company]="GMF" [editMode]="editMode" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge class="app-budge" title="Aides publiques" maticon="euro_symbol" description="Les aides publiques pour lesquelles tu peux prétendre" modele="medium-budge" type="aides-publiques" [price]="getPrice('Assurance habitation')" [company]="GMF" [editMode]="editMode" [isDone]="false" [isSelected]="true"></app-budge>
+      <app-budge class="app-budge" title="Saisie des dépenses" maticon="pie_chart" description="Un outil de saisie de tes dépenses pour gérer ton argent" modele="medium-budge" type="saisie-depenses" [price]="getPrice('Assurance habitation')" [company]="GMF" [editMode]="editMode" [isDone]="false" [isSelected]="true"></app-budge>
     </div> -->
     <h2 class="category-title">🛋️ Mes meubles</h2>
     <div class="budge-container">

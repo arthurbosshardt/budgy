@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { UserComponent } from 'src/app/pages/user/user.component';
+import companies from '../../../assets/config/companies-info.json';
 
 @Component({
   selector: 'app-budge',
@@ -16,10 +16,19 @@ export class BudgeComponent implements OnInit {
   @Input() editMode: boolean;
   @Input() company: string;
   @Input() type: string;
-  price = 40
-  
+  @Input() price: number;
+  public companies:{company_name:string, types:string[], url_website:string, url_logo:string}[] = companies;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getCompanyWebsiteUrl(): string {
+    return this.companies.find(company => company.company_name === this.company).url_website;
+  }
+
+  getCompanyLogoUrl(): string {
+    return this.companies.find(company => company.company_name === this.company).url_logo;
   }
 }

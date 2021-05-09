@@ -27,11 +27,19 @@
     <h2>{{ title }}</h2>
     <mat-icon class="budge-icon">{{ maticon }}</mat-icon>
   </div>
-  <div class="budge-recap">
-    <app-budge-recap
-      *ngIf="modele != 'small-budge' && isSelected"
-      company="{{ company }}"
-      [price]="price"
-    ></app-budge-recap>
+  <div class="budge-recap" *ngIf="modele != 'small-budge' && isSelected">
+    <div class="budge-recap-content">
+      <a href="{{ getCompanyWebsiteUrl() }}">
+        <img
+          class="company-img"
+          alt="{{ company }}"
+          src="{{ getCompanyLogoUrl() }}"
+        />
+      </a>
+      <div class="price">
+        <b>{{ price }}</b
+        ><span>€/mois</span>
+      </div>
+    </div>
   </div>
 </div>

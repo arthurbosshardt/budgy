@@ -19,13 +19,13 @@
   },
   {
     "type": "Mutuelle santé",
-    "company_name": "Harmonie",
+    "company_name": "HARMONIE",
     "sampling_day": 2,
     "price": 33.99
   },
   {
     "type": "Fournisseur internet",
-    "company_name": "Sosh",
+    "company_name": "SOSH",
     "sampling_day": 18,
     "price": 19.99
   },
@@ -43,7 +43,7 @@
   },
   {
     "type": "Fournisseur eau",
-    "company_name": "Service publique",
+    "company_name": "EDF",
     "sampling_day": 0,
     "price": 0
   }

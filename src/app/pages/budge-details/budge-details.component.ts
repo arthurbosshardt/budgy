@@ -25,7 +25,7 @@ export class BudgeDetailsComponent implements OnInit {
   private _toDo: Partial<ToDo>;
   sub: any;
   infoUser: Array<BudgeInfoClassic>;
-  public companies:{company_name:string, url_website:string, url_logo:string}[] = companies;
+  public companies:{company_name:string, types: string[], url_website:string, url_logo:string}[] = companies;
   budgeInfos = new BudgeInfoClassic("", "", 0, 0);
 
   constructor(private store: Store<State>, private _router: ActivatedRoute) { }
@@ -37,6 +37,9 @@ export class BudgeDetailsComponent implements OnInit {
         this.type = data.type_name;
         this.icon = data.icon_name;
       });
+    
+    this.companies = this.companies.filter(company => company.types.includes(this.type));
+
     this.infoUser = JSON.parse(localStorage.getItem('budgeInfo'));
     this.budgeInfos = this.infoUser.filter(x => x.type == this.type)[0];
 
