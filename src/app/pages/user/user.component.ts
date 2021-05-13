@@ -27,4 +27,7 @@ export class UserComponent implements OnInit {
     return this.infoUser.filter(budge => budge.type == type)[0].price;
   }
 
+  getIsDone(type: string) {
+    return this.infoUser.filter(budge => budge.type == type)[0].isDone;
+  }
 }

@@ -6,7 +6,7 @@
   </ul>
 </header>
 <div class="title-details">
-  <a routerLink="/user" id="return"><</a>
+  <a (click)="saveBudgeInfos()" routerLink="/user" id="return"><</a>
   <mat-icon>{{ this.icon }}</mat-icon> 
   <h1>
     {{ this.type }}
@@ -15,7 +15,7 @@
 </div>
 <div class="change-budge-form">
   <mat-horizontal-stepper #stepper>
-    <mat-step>
+    <mat-step label="Budge actuel">
       <form>
         <ng-template matStepLabel
           >Mon <strong>budge</strong> actuel</ng-template
@@ -39,10 +39,10 @@
         </div>
       </form>
     </mat-step>
-    <mat-step>
+    <mat-step label="Nouveau budge">
       <form>
         <ng-template matStepLabel
-          >Mon <strong>budge</strong> actuel</ng-template
+          >Mon nouveau <strong>budge</strong></ng-template
         >
         <mat-form-field>
           <mat-label>Nom de la compagnie</mat-label>
@@ -65,16 +65,9 @@
           <input matInput type="number" name="price" [(ngModel)]="this.budgeInfos.price" />
         </mat-form-field>
         <div>
-          <button mat-raised-button matStepperNext (click)="saveBudgeInfos()">Confirmer</button>
+          <button mat-raised-button matStepperPrevious (click)="saveBudgeInfos()">Confirmer</button>
         </div>
       </form>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel><strong>Budge</strong> modifié</ng-template>
-      <p>Le <strong>Budge</strong> a été modifié</p>
-      <div>
-        <button mat-raised-button matStepperPrevious routerLink="/user">Revenir sur ton tableau de bord</button>
-      </div>
     </mat-step>
   </mat-horizontal-stepper>
 </div>

@@ -9,6 +9,7 @@ import { completeToDos, incompleteToDos } from '../../state/todo';
 import { ActivatedRoute } from '@angular/router';
 import companies from '../../../assets/config/companies-info.json';
 import { BudgeInfoClassic } from '../../models/budge-info';
+import { NumberFormatStyle } from '@angular/common';
 
 @Component({
   selector: 'app-budge-details',
@@ -26,7 +27,8 @@ export class BudgeDetailsComponent implements OnInit {
   sub: any;
   infoUser: Array<BudgeInfoClassic>;
   public companies:{company_name:string, types: string[], url_website:string, url_logo:string}[] = companies;
-  budgeInfos = new BudgeInfoClassic("", "", 0, 0);
+  budgeInfos = new BudgeInfoClassic("", "", 0, 0, false);
+  isDone: boolean;
 
   constructor(private store: Store<State>, private _router: ActivatedRoute) { }
 
@@ -37,12 +39,14 @@ export class BudgeDetailsComponent implements OnInit {
         this.type = data.type_name;
         this.icon = data.icon_name;
       });
-    
+
+    this.isDone = true;
+
     this.companies = this.companies.filter(company => company.types.includes(this.type));
 
     this.infoUser = JSON.parse(localStorage.getItem('budgeInfo'));
     this.budgeInfos = this.infoUser.filter(x => x.type == this.type)[0];
-
+    console.log(this.budgeInfos);
     generateToDos().forEach(todo => this.store.dispatch(new AddToDo(todo)));
     this.completeToDos = this.store.pipe(select(completeToDos));
     this.incompleteToDos = this.store.pipe(select(incompleteToDos));
@@ -58,8 +62,10 @@ export class BudgeDetailsComponent implements OnInit {
       type: this.budgeInfos.type,
       company_name: this.budgeInfos.company_name,
       sampling_day: this.budgeInfos.sampling_day,
-      price: this.budgeInfos.price
+      price: this.budgeInfos.price,
+      isDone: this.isDone
     };
+    console.log(infoUserToSend);
     this.infoUser.push(infoUserToSend);
     localStorage.setItem('budgeInfo', JSON.stringify(this.infoUser));
   }
@@ -70,6 +76,8 @@ export class BudgeDetailsComponent implements OnInit {
       complete: false,
       task: this._toDo.task
     }));
+    this.isDone = false;
+    this.saveBudgeInfos();
   }
 
   onAddToDoChange(toDo: Partial<ToDo>) {
@@ -78,9 +86,13 @@ export class BudgeDetailsComponent implements OnInit {
 
   onCompleteToDo(toDo: ToDo) {
     this.store.dispatch(new CompleteToDo(toDo));
+    this.incompleteToDos.subscribe(toDos => this.isDone = (toDos.length == 0));
+    this.saveBudgeInfos();
   }
 
   onIncompleteToDo(toDo: ToDo) {
     this.store.dispatch(new IncompleteToDo(toDo));
+    this.isDone = false;
+    this.saveBudgeInfos();
   }
 }
