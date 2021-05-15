@@ -3,13 +3,15 @@ export class BudgeInfoClassic {
     public company_name: string;
     public sampling_day: number;
     public price: number;
-    public isDone: boolean;
+    public tasksToDo: Array<string>;
+    public tasksDone: Array<string>;
 
-    constructor(type: string, company_name: string, sampling_day: number, price: number, isDone: boolean){
+    constructor(type: string, company_name: string, sampling_day: number, price: number, tasksToDo: Array<string>, tasksDone: Array<string>){
         this.type = type;
         this.company_name = company_name;
         this.sampling_day = sampling_day;
         this.price = price;
-        this.isDone = isDone;
+        this.tasksToDo = tasksToDo;
+        this.tasksDone = tasksDone;
     }
 }

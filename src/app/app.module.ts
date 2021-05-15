@@ -17,14 +17,10 @@ import { BudgeDetailsComponent } from './pages/budge-details/budge-details.compo
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { StateModule } from './state/state.module';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
-import { TodoComponent } from './components/todo/todo.component';
-import { TodoFormComponent } from './components/todo-form/todo-form.component';
-import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 const routes: Routes = [
   { path: '', component: HubComponent, data : {type_name : 'Accueil', icon_name: 'home'}},
@@ -46,9 +42,6 @@ const routes: Routes = [
     UserComponent,
     BudgeComponent,
     BudgeDetailsComponent,
-    TodoComponent,
-    TodoFormComponent,
-    TodoListComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +61,6 @@ const routes: Routes = [
     MatListModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    StateModule.forRoot(),
     RouterModule.forRoot(routes),
   ],
   exports: [ MatFormFieldModule, MatInputModule ],

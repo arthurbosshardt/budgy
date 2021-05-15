@@ -78,10 +78,7 @@
       <mat-card-title>Ajouter une <strong>tâche</strong></mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <app-todo-form (toDoChange)="onAddToDoChange($event)"></app-todo-form>
-      <div fxLayout="row" fxLayoutAlign="end">
-        <button mat-raised-button (click)="addToDo()">Ajouter</button>
-      </div>
+      <button mat-raised-button>Ajouter</button>
     </mat-card-content>
   </mat-card>
 
@@ -90,18 +87,7 @@
       <mat-card-title><strong>tâches</strong> à faire</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <ng-container *ngIf="incompleteToDos | async; let toDos">
-        <ng-container *ngIf="toDos.length > 0; else allDone">
-          <app-todo-list
-            [toDos]="toDos"
-            (toDoChange)="onCompleteToDo($event)"
-          ></app-todo-list>
-        </ng-container>
-        <ng-template #allDone>
-          <div>
-            <h4>Rien à faire</h4>
-          </div>
-        </ng-template>
+      <ng-container *ngIf="">
       </ng-container>
     </mat-card-content>
   </mat-card>
@@ -111,10 +97,7 @@
       <mat-card-title><strong>tâches</strong> effectuées</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <app-todo-list
-        [toDos]="completeToDos | async"
-        (toDoChange)="onIncompleteToDo($event)"
-      ></app-todo-list>
+      
     </mat-card-content>
   </mat-card>
 </div>
