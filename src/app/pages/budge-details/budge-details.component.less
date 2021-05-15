@@ -131,18 +131,18 @@
 
 .cards {
   margin-top: 20px;
-  margin-left: 10%;
   width: 80%;
+  margin-left: 10%;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
 
   mat-card {
-    color: rgba(0, 0, 0, 0.849);
+    color: rgb(255, 255, 255);
     margin-top: 20px;
-    background-color: rgba(236, 236, 236);
+    background-color: @budgyblue;
     border-radius: 25px;
-    flex: 1 1 auto;
-    margin: 20px;
+    width: 30%;
+    height: 100%;
 
     mat-card-title {
       text-transform: uppercase;
@@ -164,24 +164,24 @@ h2 {
   color: rgba(0, 0, 0, 0.849);
 }
 
-/deep/ .mat-checkbox-frame {
-  border-color: rgba(0, 0, 0, 0.849);
-}
-
 /deep/ .mat-form-field-empty.mat-form-field-label {
-  color: rgba(0, 0, 0, 0.897);
+  color: rgb(0, 0, 0);
 }
 
 /deep/ .mat-focused .mat-form-field-label {
-  color: rgba(0, 0, 0, 0.897);
+  color: rgb(0, 0, 0);
 }
 
 /deep/ .mat-form-field-appearance-legacy .mat-form-field-underline {
-  background-color: rgba(0, 0, 0, 0.897);
+  background-color: rgb(0, 0, 0);
+}
+
+/deep/ .cards .mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: rgb(255, 255, 255);
 }
 
 /deep/ .mat-form-field-appearance-legacy .mat-form-field-label {
-  color: rgba(0, 0, 0, 0.897);
+  color: rgb(0, 0, 0);
 }
 
 /deep/ .mat-select-min-line {
@@ -194,4 +194,37 @@ h2 {
 
 /deep/ .mat-select-arrow {
   color: black;
+}
+
+/deep/ .mat-list-text {
+  color: white;
+}
+
+/deep/ .mat-pseudo-checkbox {
+  color: white;
+}
+
+/deep/ .mat-checkbox {
+  color: white !important;
+}
+
+/deep/ .mat-checkbox-label {
+  color: white;
+}
+
+/deep/ .mat-input-element {
+  caret-color: white;
+}
+
+/deep/ .mat-form-field.mat-focused .mat-form-field-ripple{
+  background-color: white;
+}
+
+/deep/ .mat-button-disabled {
+  background-color: rgba(165, 165, 165, 0.61) !important; 
+  color: rgb(255, 255, 255) !important;
+}
+
+.tasksEmpty {
+  opacity: 0.6;
 }

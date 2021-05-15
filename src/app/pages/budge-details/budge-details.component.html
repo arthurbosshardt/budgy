@@ -7,7 +7,7 @@
 </header>
 <div class="title-details">
   <a (click)="saveBudgeInfos()" routerLink="/user" id="return"><</a>
-  <mat-icon>{{ this.icon }}</mat-icon> 
+  <mat-icon>{{ this.icon }}</mat-icon>
   <h1>
     {{ this.type }}
   </h1>
@@ -22,17 +22,34 @@
         >
         <mat-form-field>
           <mat-label>Nom de la compagnie</mat-label>
-          <input matInput type="text" [(value)]="this.budgeInfos.company_name" readonly />
+          <input
+            matInput
+            type="text"
+            [(value)]="this.budgeInfos.company_name"
+            readonly
+          />
         </mat-form-field>
         <br />
         <mat-form-field>
           <mat-label>Jour de prélèvement</mat-label>
-          <input matInput type="number" min="1" max="31" [(value)]="this.budgeInfos.sampling_day" readonly />
+          <input
+            matInput
+            type="number"
+            min="1"
+            max="31"
+            [(value)]="this.budgeInfos.sampling_day"
+            readonly
+          />
         </mat-form-field>
         <br />
         <mat-form-field>
           <mat-label>Prix mensuel</mat-label>
-          <input matInput type="number" [(value)]="this.budgeInfos.price" readonly />
+          <input
+            matInput
+            type="number"
+            [(value)]="this.budgeInfos.price"
+            readonly
+          />
         </mat-form-field>
         <div>
           <button mat-raised-button matStepperNext>Modifier</button>
@@ -46,7 +63,11 @@
         >
         <mat-form-field>
           <mat-label>Nom de la compagnie</mat-label>
-          <mat-select name="company_name" [(ngModel)]="this.budgeInfos.company_name" [(value)]="this.budgeInfos.company_name">
+          <mat-select
+            name="company_name"
+            [(ngModel)]="this.budgeInfos.company_name"
+            [(value)]="this.budgeInfos.company_name"
+          >
             <mat-option
               *ngFor="let company of companies"
               [value]="company.company_name"
@@ -57,15 +78,33 @@
         <br />
         <mat-form-field>
           <mat-label>Jour de prélèvement</mat-label>
-          <input matInput type="number" min="1" max="31" name="sampling_day" [(ngModel)]="this.budgeInfos.sampling_day" />
+          <input
+            matInput
+            type="number"
+            min="1"
+            max="31"
+            name="sampling_day"
+            [(ngModel)]="this.budgeInfos.sampling_day"
+          />
         </mat-form-field>
         <br />
         <mat-form-field>
           <mat-label>Prix mensuel</mat-label>
-          <input matInput type="number" name="price" [(ngModel)]="this.budgeInfos.price" />
+          <input
+            matInput
+            type="number"
+            name="price"
+            [(ngModel)]="this.budgeInfos.price"
+          />
         </mat-form-field>
         <div>
-          <button mat-raised-button matStepperPrevious (click)="saveBudgeInfos()">Confirmer</button>
+          <button
+            mat-raised-button
+            matStepperPrevious
+            (click)="saveBudgeInfos()"
+          >
+            Confirmer
+          </button>
         </div>
       </form>
     </mat-step>
@@ -78,26 +117,53 @@
       <mat-card-title>Ajouter une <strong>tâche</strong></mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <button mat-raised-button>Ajouter</button>
+      <mat-form-field>
+        <input matInput [(ngModel)]="taskToAdd" />
+      </mat-form-field>
+      <br />
+      <button
+        mat-raised-button
+        (click)="this.addToDo(taskToAdd)"
+        [disabled]="this.taskToAdd == '' || this.taskToAdd == null"
+      >
+        Ajouter
+      </button>
     </mat-card-content>
   </mat-card>
 
-  <mat-card>
+  <mat-card [ngClass]="{ tasksEmpty: this.budgeInfos.tasksToDo.length === 0 }">
     <mat-card-header>
       <mat-card-title><strong>tâches</strong> à faire</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <ng-container *ngIf="">
+      <ng-container>
+        <mat-selection-list [multiple]="false">
+          <mat-list-option
+            *ngFor="let task of this.budgeInfos.tasksToDo"
+            (click)="this.addToDone(task)"
+          >
+            <mat-checkbox [checked]="false">{{ task }}</mat-checkbox>
+          </mat-list-option>
+        </mat-selection-list>
       </ng-container>
     </mat-card-content>
   </mat-card>
 
-  <mat-card>
+  <mat-card [ngClass]="{ tasksEmpty: this.budgeInfos.tasksDone.length === 0 }">
     <mat-card-header>
       <mat-card-title><strong>tâches</strong> effectuées</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      
+      <ng-container>
+        <mat-selection-list [multiple]="false">
+          <mat-list-option
+            *ngFor="let task of this.budgeInfos.tasksDone"
+            (click)="this.removeTask(task)"
+          >
+            <mat-checkbox [indeterminate]="true">{{ task }}</mat-checkbox>
+          </mat-list-option>
+        </mat-selection-list>
+      </ng-container>
     </mat-card-content>
   </mat-card>
 </div>
