@@ -12,6 +12,8 @@ export class AppComponent implements OnInit {
   public infoUser:{type:string, company_name:string, sampling_day:number, price:number}[] = infoUser;
 
   ngOnInit(): void {
-    localStorage.setItem('budgeInfo', JSON.stringify(infoUser));
+    if(localStorage.getItem('budgeInfo') == null) {
+      localStorage.setItem('budgeInfo', JSON.stringify(infoUser));
+    }
   }
 }

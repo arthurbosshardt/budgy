@@ -24,6 +24,7 @@ export class UserComponent implements OnInit {
   }
 
   getPrice(type: string) {
+    console.log(this.infoUser);
     return this.infoUser.filter(budge => budge.type == type)[0].price;
   }
 }

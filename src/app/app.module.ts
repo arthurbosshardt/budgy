@@ -33,6 +33,8 @@ const routes: Routes = [
   { path: 'fournisseur-gaz', component: BudgeDetailsComponent, data : {type_name : 'Fournisseur gaz', icon_name: 'whatshot'}},
   { path: 'fournisseur-electricite', component: BudgeDetailsComponent, data : {type_name : 'Fournisseur électricité', icon_name: 'flash_on'}},
   { path: 'fournisseur-eau', component: BudgeDetailsComponent, data : {type_name : 'Fournisseur eau', icon_name: 'waves'}},
+  { path: 'banque', component: BudgeDetailsComponent, data : {type_name : 'Banque', icon_name: 'account_balance'}},
+  { path: 'aides-publiques', component: BudgeDetailsComponent, data : {type_name : 'Aides publiques', icon_name: 'euro_symbol'}},
 ]
 
 @NgModule({

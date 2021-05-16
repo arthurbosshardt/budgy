@@ -62,5 +62,21 @@
     "price": 0,
     "tasksToDo": [],
     "tasksDone": []
+  },
+  {
+    "type": "Banque",
+    "company_name": "BOURSORAMA",
+    "sampling_day": 0,
+    "price": 0,
+    "tasksToDo": [],
+    "tasksDone": []
+  },
+  {
+    "type": "Aides publiques",
+    "company_name": "CAF",
+    "sampling_day": 0,
+    "price": 0,
+    "tasksToDo": [],
+    "tasksDone": []
   }
 ]

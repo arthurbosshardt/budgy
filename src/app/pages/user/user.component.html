@@ -124,7 +124,8 @@
         [isSelected]="true"
       ></app-budge>
     </div>
-    <!-- <div class="budge-container">
+    <h2 class="category-title">💰 Mes finances</h2>
+    <div class="budge-container">
       <app-budge
         class="app-budge"
         title="Banque"
@@ -132,8 +133,8 @@
         description="Les banques chez qui tu souhaites placer ton argent"
         modele="medium-budge"
         type="banque"
-        [price]="getPrice('Assurance habitation')"
-        [company]="GMF"
+        [price]="getPrice('Banque')"
+        [company]="getCompanyName('Banque')"
         [editMode]="editMode"
         [isDone]="true"
         [isSelected]="true"
@@ -145,26 +146,13 @@
         description="Les aides publiques pour lesquelles tu peux prétendre"
         modele="medium-budge"
         type="aides-publiques"
-        [price]="getPrice('Assurance habitation')"
-        [company]="GMF"
+        [price]="getPrice('Aides publiques')"
+        [company]="getCompanyName('Aides publiques')"
         [editMode]="editMode"
         [isDone]="true"
         [isSelected]="true"
       ></app-budge>
-      <app-budge
-        class="app-budge"
-        title="Saisie des dépenses"
-        maticon="pie_chart"
-        description="Un outil de saisie de tes dépenses pour gérer ton argent"
-        modele="medium-budge"
-        type="saisie-depenses"
-        [price]="getPrice('Assurance habitation')"
-        [company]="GMF"
-        [editMode]="editMode"
-        [isDone]="true"
-        [isSelected]="true"
-      ></app-budge>
-    </div> -->
+    </div>
     <!-- <h2 class="category-title">🛋️ Mes meubles</h2>
     <div class="budge-container">
       <app-budge

@@ -58,5 +58,17 @@
         "types": ["Fournisseur gaz", "Fournisseur électricité", "Fournisseur eau"], 
         "url_website": "https://total.direct-energie.com",
         "url_logo": "https://selectra.info/sites/default/files/images/logo_fournisseurs/logo_total.png"            
-    }         
+    },
+    {
+        "company_name": "BOURSORAMA",
+        "types": ["Banque"], 
+        "url_website": "https://www.boursorama.com/",
+        "url_logo": "https://comparateur-cartes-de-credit.fr/wp-content/uploads/thumbs_dir/boursorama-banque-1vjckmieni1q2ha7d8bsqmtzo289u5f1r23h84poyl7g.png"            
+    },
+    {
+        "company_name": "CAF",
+        "types": ["Aides publiques"], 
+        "url_website": "https://www.caf.fr/",
+        "url_logo": "https://upload.wikimedia.org/wikipedia/fr/c/cb/Caisse_d_allocations_familiales_france_logo.svg"            
+    }              
 ]
